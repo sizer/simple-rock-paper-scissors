@@ -1,20 +1,14 @@
 service:
-  name: aws-nodejs-ecma-script
-
-# Add the serverless-webpack plugin
-plugins:
-  - serverless-webpack
+  name: simple-rock-paper-scissors
 
 provider:
   name: aws
   runtime: nodejs6.10
 
 functions:
-  first:
-    handler: first.hello
-  second:
-    handler: second.hello
+  main:
+    handler: ./.webpack/handler.simpleRPS
     events:
-      - http:
-          method: get
-          path: second
+      - alexaSkill:
+        appId: ${file(./config/secrets.yml):alexa.appId}
+        enabled: true
