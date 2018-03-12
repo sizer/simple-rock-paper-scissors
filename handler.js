@@ -6,7 +6,7 @@ var Alexa = require('alexa-sdk');
 
 //Replace with your app ID (OPTIONAL).  You can find this value at the top of your skill's page on http://developer.amazon.com.
 //Make sure to enclose your value in quotes, like this: var APP_ID = "amzn1.ask.skill.bb4045e6-b3e8-4133-b650-72923c5980f1";
-var APP_ID = undefined;
+var APP_ID = process.env.ALEXA_APP_ID;
 
 var SKILL_NAME = "豆知識";
 var GET_FACT_MESSAGE = "知ってましたか？";
