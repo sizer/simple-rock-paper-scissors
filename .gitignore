@@ -1,11 +1,10 @@
 # package directories
 node_modules
-jspm_packages
 
 # Serverless directories
 .serverless
 
 # Webpack directories
-.webpack
+dist
 
 config/secrets.yml

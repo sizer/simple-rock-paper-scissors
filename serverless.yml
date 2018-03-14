@@ -11,7 +11,7 @@ provider:
 
 functions:
   main:
-    handler: ./.webpack/handler.simpleRPS
+    handler: ./dist/main.simpleRPS
     events:
       - alexaSkill:
         appId: ${file(./config/secrets.yml):alexa.appId}

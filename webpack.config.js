@@ -1,9 +1,9 @@
 const path = require('path');
-// eslint-disable-next-line import/no-unresolved
-const slsw = require('serverless-webpack');
 
 module.exports = {
-  entry: slsw.lib.entries,
+  entry: [
+      path.join(__dirname, '/src/main.js')
+  ],
   target: 'node',
   module: {
     loaders: [{
@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     libraryTarget: 'commonjs',
-    path: path.join(__dirname, '.webpack'),
+    path: path.join(__dirname, 'dist'),
     filename: '[name].js',
   },
 };
