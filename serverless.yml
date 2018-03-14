@@ -11,7 +11,7 @@ provider:
 
 functions:
   main:
-    handler: ./dist/main.simpleRPS
+    handler: ./src/main.simplerps
     events:
       - alexaSkill:
         appId: ${file(./config/secrets.yml):alexa.appId}

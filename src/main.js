@@ -35,7 +35,7 @@ var data = [
 //=========================================================================================================================================
 //この行から下のコードに変更を加えると、スキルが動作しなくなるかもしれません。わかる人のみ変更を加えてください。
 //=========================================================================================================================================
-exports.simpleRPS = function(event, context, callback) {
+exports.simplerps = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.APP_ID = APP_ID;
     alexa.registerHandlers(handlers);
